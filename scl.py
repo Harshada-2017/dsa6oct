@@ -36,25 +36,26 @@ class LinkedList:
             new_node.next=temp.next
             temp.next=new_node
             
-                
-            
-            
+                    
     def del_node(self,value):
         temp=self.head
-        if temp.data==value:
-            self.head=self.head.next
-            return
-        while(temp):
-            if temp.data==value:
-                break
-            else:
+        prev=None
+        if temp.data==value: # if we delete the first node
+                                     # then the first node points to self.head.next
+            while(temp!=self.head):
+                temp=temp.nexr
+            self.head=self.head.next 
+            temp.next=self.head
+        else:
+            
+            while(temp and temp.data!=value):
                 prev=temp
                 temp=temp.next
-        if temp==None:
-            print("Value is not present in the list")
-            return
-        prev.next=temp.next
-        temp=None
+            if temp==None:
+                print("Value is not present in the list")
+                return
+            prev.next=temp.next
+            temp=None
             
     def print(self):
             print()
@@ -83,8 +84,9 @@ list.append(Node(90))
 list.print()
 
 
+
+list.insert(Node(100),2)
+list.print()
 #list.del_node(30)
 
 #list.print()
-list.insert(Node(100),2)
-list.print()

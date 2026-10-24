@@ -22,12 +22,11 @@ class stack:
             while temp:
                 print(temp.data)
                 temp=temp.next
-                
+    # Reverse stack using another stack     
     def rev(self):
         temp=self.top
         while temp:
             st1.push((Node(temp.data)))
-            prev=temp
             temp=temp.next
         
 st=stack()

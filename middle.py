@@ -74,7 +74,7 @@ list.firstandlast()
 list.print()
 list.firstandlast
 list.print()
-list.del_node(30)
+list.del_node(20)
 list.print()
     #list.insert(Node(100),1)
     #list.print()   

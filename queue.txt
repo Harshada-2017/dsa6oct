@@ -8,7 +8,7 @@ dequeue-remove (acess) an item from the queue.
 front and rear pointers
 
 front - first element.
-rear- lats element.
+rear- last element.
 
 types of queue
 
