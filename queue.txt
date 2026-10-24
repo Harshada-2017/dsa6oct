@@ -1,0 +1,18 @@
+queue data structure
+
+queue is a linear data structure that follows first in first out. Ex- customer in a queue.
+
+Basic operations
+enqueue-insert (add) an item to the queue
+dequeue-remove (acess) an item from the queue.
+front and rear pointers
+
+front - first element.
+rear- lats element.
+
+types of queue
+
+linear queue
+circular queue
+priority queue
+double ended queue(Dque)
