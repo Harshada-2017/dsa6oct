@@ -20,8 +20,10 @@ class stack:
         else:
             temp=self.top
             print("Poped Element ",temp.data)
+            popped_data=temp.data
             self.top=self.top.next 
             temp=None
+            return popped_data
     def print(self):
             if self.isempty():
                 print("Stack is empty...")
@@ -34,6 +36,8 @@ class stack:
 class lqueue:
     def __init__(self):
         self.front=self.rear=None
+    def isempty(self):
+            return  self.front is None
     def enqueue(self, new_node):
         if self.rear:
             self.rear.next=new_node
@@ -44,12 +48,13 @@ class lqueue:
     def dequeue(self):
         temp=self.front
         print("deleted node",temp.data)
+        dequed_data=temp.data
         self.front=self.front.next 
         if self.front==None:  #m if ther is only one node that we are deleting
             print("Queue is empty")
             self.rear=None
         temp=None 
-            
+        return dequed_data
     def print(self):
         temp=self.front
         while temp:
@@ -57,22 +62,17 @@ class lqueue:
             temp=temp.next 
         print()
     
-    def rev_stack(s1):
-        q1=lqueue()
-        while not s1.isempty():
-            q1.enqueue(Node(s1.pop()))
-        q1.print()
-            
-que=lqueue()
-que.enqueue(Node(12))
-que.enqueue(Node(72))
-que.enqueue(Node(56))
-que.enqueue(Node(20))
-que.enqueue(Node(17))
-que.print()
-que.dequeue()
-que.dequeue()
-                    
+def rev_stack(s1):
+    q1=lqueue()
+    while not s1.isempty(): # pop from stack and enqueue to queue
+        q1.enqueue(Node(s1.pop()))
+    #q1.print()
+    while not q1.isempty():
+        s1.push(Node(q1.dequeue()))
+    s1.print()    
+
+
+                  
 st=stack()
 st.push(Node(10))
 st.push(Node(50))
@@ -80,3 +80,4 @@ st.push(Node(70))
 st.push(Node(30))
 st.push(Node(40))
 st.print()
+rev_stack(st)
