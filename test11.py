@@ -7,10 +7,10 @@ class node:
         self.next = None
 
 
-class priorityQueue:
+class priorityQueue:# creates a class for managing patients
 
     def __init__(self):
-        self.front = None
+        self.front = None # it is initially empty
 
     # Input Patient Details
     def input_patient(self):
