@@ -8,5 +8,11 @@ Terminology
 ->Edge:In tree data structure,the connecting link between any two nodes is called as Edge
 ->Siblings:In tree data structure,nodes which belong to same parent are called as Siblings
 ->Degree:the total number of childrens of a node is called a Degree of the node.
-Terminal or leaf node:In tree data structure,the node which do not have a child is called
+->Terminal or leaf node:In tree data structure,the node which do not have a child is called
 as Terminal /Leaf Node.
+->Non TerminalNode:In tree data structure,the node which have atleast
+one child is caleed non terminal leaf
+->Height:In tree data structure,the total number of edges from leaf node to a particular node in the
+longest path is called as Height of that Node
+->Subtree:In tree data structure,each child from a node forms a subtree recursively.
+Every child node will form a node subtree on its parent node.
