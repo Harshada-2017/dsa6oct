@@ -1,9 +1,9 @@
-Tree
+#Tree
 ->Tree is a non linear data structure which organizes data in hierarchical structure.
 ->Applications:Database indexing,file system organization,Web Development,DNS(Domain Name System)
 ,Artificial Intelligence,Complier Design.
 
-Terminology
+#Terminology
 ->Root:In tree data structure ,the first node is called as root node.
 ->Edge:In tree data structure,the connecting link between any two nodes is called as Edge
 ->Siblings:In tree data structure,nodes which belong to same parent are called as Siblings
@@ -18,6 +18,10 @@ longest path is called as Height of that Node
 Every child node will form a node subtree on its parent node.
 ->path
 ->Level
-Types of tree:
+#Types of tree:
 ->binary tree
 ->Strictly binary tree 
+->Complete Binary tree
+->left skewed binary tree
+->right skewed binary tree
+Binary Search Tree(BST)
