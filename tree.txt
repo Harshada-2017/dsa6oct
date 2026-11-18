@@ -16,3 +16,8 @@ one child is caleed non terminal leaf
 longest path is called as Height of that Node
 ->Subtree:In tree data structure,each child from a node forms a subtree recursively.
 Every child node will form a node subtree on its parent node.
+->path
+->Level
+Types of tree:
+->binary tree
+->Strictly binary tree 
