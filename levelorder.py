@@ -96,16 +96,21 @@ class BST:
                 return
             arr=[]
             cnt=0 # for counting visited node
+            level=0
             arr.append(rt)
             while cnt<len(arr):
-                temp=arr[cnt]
-                cnt+=1
-                print(temp.data, end=" ")
-                if temp.left:
-                    arr.append(temp.left)
-                if temp.right:
-                   arr.append(temp.right)        
-            
+                nodecnt=len(arr)-cnt # no of nodes to be visited
+                print("\n Level",level,"nodes:",end=" ")
+                for i in range(nodecnt):
+                    temp=arr[cnt]
+                    cnt+=1
+                    print(temp.data, end=" ")
+                    if temp.left:
+                        arr.append(temp.left)
+                    if temp.right:
+                       arr.append(temp.right)
+                level+=1       
+            print("\nHeight of the tree:",level-1)
     def findminmax(self):
         temp=self.root
         while temp.left:
@@ -138,6 +143,7 @@ b1.postorder(b1.root)
 #b1.findminmax()
 print("\nLevel order")
 b1.levelorder(b1.root)
+
 #b1.delete(b1.root,4)
 #print("\n After deletion:",end=" ")
 #b1.inorder(b1.root)
@@ -145,3 +151,4 @@ b1.levelorder(b1.root)
 #    print("\n Found the node")
 #else:
 #    print("\n Not Found")
+
