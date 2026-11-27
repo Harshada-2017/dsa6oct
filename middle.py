@@ -41,7 +41,7 @@ class LinkedList:
     def del_node(self,value):
             temp=self.head
             if temp.data==value:
-                self.head=self.head.next
+                self.head=self.head.next 
                 return
             while(temp):
                 if temp.data==value:
