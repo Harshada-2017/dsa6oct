@@ -42,8 +42,8 @@ class LinkedList:
         prev=None
         if temp.data==value: # if we delete the first node
                                      # then the first node points to self.head.next
-            while(temp!=self.head):
-                temp=temp.nexr
+            while(temp.next!=self.head):
+                temp=temp.next
             self.head=self.head.next 
             temp.next=self.head
         else:
