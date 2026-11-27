@@ -18,17 +18,18 @@ class LinkedList:
             temp.next=new_node  #appending new node
             
     def insert(self,new_node,pos):
+        temp=self.head
         if pos==1: #inserting at first position
-            new_node.next=self.head # points to the head
-            self.head=new_node
+            new_node.next=self.head # newnode points to the old    head
+            self.head=new_node # now head points to newnode
         else:
             p=1
             while(p!=pos-1):
                 temp=temp.next
                 p+=1
-                new_node.next=temp.next
-                temp.next=new_node
-                return
+            new_node.next=temp.next
+            temp.next=new_node
+            return
             
     def print(self):
         temp=self.head
@@ -55,5 +56,5 @@ list.append(n1)
 list.append(n2)
 list.append(n3)
 
-list.insert(Node(100),1)
+list.insert(Node(100),4)
 list.print()
